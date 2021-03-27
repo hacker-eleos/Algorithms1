@@ -11,8 +11,8 @@ public class Board {
 
     private final int[][] tiles;
     private final int n;
-    private int randomX1;
-    private int randomY1;
+    private final int randomX1;
+    private final int randomY1;
 
 
     // create a board from an n-by-n array of tiles,
@@ -25,17 +25,19 @@ public class Board {
                 this.tiles[i][j] = tiles[i][j];
             }
         }
-         randomX1 = StdRandom.uniform(n);
-         randomY1 = StdRandom.uniform(n);
-        while (this.tiles[randomX1][randomY1] == 0) {
-            randomX1 = StdRandom.uniform(n);
-            randomY1 = StdRandom.uniform(n);
+        int X1 = StdRandom.uniform(n);
+        int Y1 = StdRandom.uniform(n);
+        while (this.tiles[X1][Y1] == 0) {
+            X1 = StdRandom.uniform(n);
+            Y1 = StdRandom.uniform(n);
         }
+        randomX1 = X1;
+        randomY1 = Y1;
     }
 
     // unit testing (not graded)
     public static void main(String[] args) {
-        int[][] tiles = new int[][] { { 8, 1, 3 }, { 4, 0, 2 }, { 7, 6, 5 } };
+        int[][] tiles = { { 8, 1, 3 }, { 4, 0, 2 }, { 7, 6, 5 } };
         Board board = new Board(tiles);
         System.out.println(board.hamming());
         System.out.println(board.manhattan());
