@@ -40,6 +40,7 @@ public class RangeSearchVisualizer {
 
         // draw the points
         StdDraw.clear();
+        StdDraw.setScale(-0.05, 1.05);
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.setPenRadius(0.01);
         brute.draw();
