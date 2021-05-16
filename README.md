@@ -1,2 +1,2 @@
 # Algorithms1
-Algorithms-I course from Coursera.
+Algorithms, Part 1 by Princeton University on Coursera.
